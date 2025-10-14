@@ -2,7 +2,10 @@
 title: "Decision Tree Challenge"
 subtitle: "Feature Importance and Categorical Variable Encoding"
 format:
-  html: default
+  html: 
+    toc: true
+    toc-depth: 3
+    toc-title: "Contents"
 execute:
   echo: true
   eval: true
@@ -11,6 +14,12 @@ execute:
 # 🌳 Decision Tree Challenge - Feature Importance and Variable Encoding
 
 Let's assume we want to predict house prices and understand which features matter most. The key question is: **How does encoding categorical variables as numbers affect our understanding of feature importance?**
+
+::: {.callout-note}
+## 📋 Challenge Overview
+
+This analysis demonstrates the critical importance of proper variable encoding in decision trees. After exploring the data and building models, jump to the [Discussion Questions](#sec-discussion) to see the key insights about numerical vs categorical encoding and R vs Python implementations.
+:::
 
 ## The Ames Housing Dataset 🏠
 
@@ -233,7 +242,7 @@ ggplot(importance_cat, aes(x = reorder(Feature, Importance), y = Importance)) +
 ```
 
 
-## Discussion Questions for Challenge
+## Discussion Questions for Challenge {#sec-discussion}
 
 
 1. **Numerical vs Categorical Encoding:** There are four models above, two in R and two in Python. For each language, the models differ by how zip code is modelled, either as a numerical variable or as a categorical variable. Given what you know about zip codes and real estate prices, how should zip code be modelled, numerically or categorically?
