@@ -11,7 +11,7 @@ execute:
   eval: true
 ---
 
-# 🌳 Decision Tree Challenge - Feature Importance and Variable Encoding [#](#sec-discussion)
+# 🌳 Decision Tree Challenge - Feature Importance and Variable Encoding [Link to Discussion](#sec-discussion)
 
 Let's assume we want to predict house prices and understand which features matter most. The key question is: **How does encoding categorical variables as numbers affect our understanding of feature importance?**
 
