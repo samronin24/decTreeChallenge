@@ -29,7 +29,7 @@ We are analyzing the Ames Housing dataset which contains detailed information ab
 
 ```{r}
 #| label: load-and-model-r
-#| echo: true
+#| echo: false
 #| message: false
 #| warning: false
 
@@ -71,7 +71,7 @@ cat("Model built with", sum(tree_model$frame$var == "<leaf>"), "terminal nodes\n
 
 ```{r}
 #| label: visualize-tree-r
-#| echo: true
+#| echo: false
 #| message: false
 #| warning: false
 #| fig-width: 10
@@ -153,7 +153,7 @@ Now let's repeat the analysis with zipCode properly encoded as categorical varia
 
 ```{r}
 #| label: categorical-r
-#| echo: true
+#| echo: false
 #| message: false
 #| warning: false
 
@@ -194,7 +194,7 @@ if(zipcode_in_tree) {
 
 ```{r}
 #| label: visualize-tree-cat-r
-#| echo: true
+#| echo: false
 #| message: false
 #| warning: false
 #| fig-width: 10
