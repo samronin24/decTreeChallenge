@@ -7,19 +7,13 @@ format:
     toc-depth: 3
     toc-title: "Contents"
 execute:
-  echo: true
+  echo: false
   eval: true
 ---
 
-# 🌳 Decision Tree Challenge - Feature Importance and Variable Encoding
+# 🌳 Decision Tree Challenge - Feature Importance and Variable Encoding [#](#sec-discussion)
 
 Let's assume we want to predict house prices and understand which features matter most. The key question is: **How does encoding categorical variables as numbers affect our understanding of feature importance?**
-
-::: {.callout-note}
-## 📋 Challenge Overview
-
-This analysis demonstrates the critical importance of proper variable encoding in decision trees. After exploring the data and building models, jump to the [Discussion Questions](#sec-discussion) to see the key insights about numerical vs categorical encoding and R vs Python implementations.
-:::
 
 ## The Ames Housing Dataset 🏠
 
@@ -278,7 +272,7 @@ ggplot(importance_cat, aes(x = reorder(Feature, Importance), y = Importance)) +
 
 ### Questions to Answer for 95% Grade on Challenge
 
-3. **Professional Presentation:** Your discussion answers should be written in a professional, engaging style that would be appropriate for a business audience. Avoid technical jargon and focus on practical implications.  Use Quarto markdown linking to create a link to the discussion section from the top of the page (see https://quarto.org/docs/authoring/cross-references.html#sections).
+3. **Professional Presentation:** Your discussion answers should be written in a professional, engaging style that would be appropriate for a business audience. Avoid technical jargon and focus on practical implications.  disc
 
 ### Questions to Answer for 100% Grade on Challenge
 
