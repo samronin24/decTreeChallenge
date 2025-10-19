@@ -246,34 +246,3 @@ ggplot(importance_cat, aes(x = reorder(Feature, Importance), y = Importance)) +
 2. **R vs Python Implementation Differences:** When modelling zip code as a categorical variable, the output tree and feature importance differs quite significantly between R and Python. Investigate why this is the case. Which language would you say does a better job of modelling zip code as a categorical variable? Why is this the case? Do you see any documentation suggesting the other language does a better job? If so, please provide a quote from the documentation.
 
 ### R and Python differ in categorical variable handling because R's rpart package supports categorical variables and has an algorithm that splits directly on categorical vairable and treates it as a single feature for importance calculation. On the other hand, Python's scikit-learn requires all input data to be numerical and must use one-hot encoding, which creates seperaate binary columns for each zip code. Therefore the importance is spread across multiple dummy variables. R does a significantly better job of modeling categorical variables because R creates meaningful splits that group related cateogries together but Python creates artificial splits on individual dummy variables that are harder to interpret. We can see in feature importance that Python dilutes importance across multiple dummy variables which is underestimating the true importance. R maintains reasonable tree complexity with logical categorical splits whereas Python creates overly complex trees with many splits on dummy variables. To support my claim, I will provide a quote from the documentation of the sklearn.tree.DecisionTreeRegression site. The quote says, "However, the scikit-learn implementation does not support categorical variables for now." This explains why Python does a worse job of modelling categorical variables.
-
-
-
-
-**What makes a great report:**
-
-- **Clear narrative:** Tell the story of what you discovered about decision tree feature importance
-- **Insightful analysis:** Focus on the most interesting differences between numerical and categorical encoding
-- **Professional presentation:** Clean, readable, and engaging
-- **Concise conclusions:** No AI babble or unnecessary technical jargon
-- **Human insights:** Your interpretation of what the feature importance rankings actually mean (or don't mean)
-- **Documentation-based analysis:** For question 2, ground your analysis in actual library documentation
-
-**What we're looking for:** A compelling 1-2 minute read that demonstrates both the power of decision trees for interpretability and the critical importance of proper variable encoding.
-:::
-
-### Questions to Answer for 75% Grade on Challenge
-
-1. **Numerical vs Categorical Analysis:** Provide a clear, well-reasoned answer to question 1 about how zip codes should be modelled. Your answer should demonstrate understanding of why categorical variables need special treatment in decision trees.
-
-### Questions to Answer for 85% Grade on Challenge
-
-2. **R vs Python Implementation Analysis:** Provide a thorough analysis of question 2, including investigation of the official documentation for both `rpart` (R) and `sklearn.tree.DecisionTreeRegressor` (Python). Your analysis should explain the technical differences and provide a reasoned opinion about which implementation handles categorical variables better.
-
-### Questions to Answer for 95% Grade on Challenge
-
-3. **Professional Presentation:** Your discussion answers should be written in a professional, engaging style that would be appropriate for a business audience. Avoid technical jargon and focus on practical implications.  disc
-
-### Questions to Answer for 100% Grade on Challenge
-
-4. **Documentation Integration:** For question 2, include a specific quote from the official documentation of `sklearn.tree.DecisionTreeRegressor` that supports your analysis. 
